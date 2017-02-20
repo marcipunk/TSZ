@@ -9,12 +9,12 @@ namespace TSZ
     class TehenData
     {
         //private List<Tehen> tehenek;
-        public static DataTable tehenTable;
+        public static DataTable tehenTable ;
         
 
         static TehenData()
         {
-            tehenTable = new DataTable();
+            tehenTable = new DataTable { TableName = "tehenek" };
             tehenTable.Columns.Add(new DataColumn("id", typeof(int)));
             tehenTable.Columns.Add(new DataColumn("nev", typeof(string)));
             tehenTable.Columns.Add(new DataColumn("tejhozam", typeof(int)));

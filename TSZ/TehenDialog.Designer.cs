@@ -42,6 +42,7 @@
             // FajtaBox
             // 
             this.FajtaBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FajtaBox.ForeColor = System.Drawing.Color.Black;
             this.FajtaBox.FormattingEnabled = true;
             this.FajtaBox.Location = new System.Drawing.Point(100, 139);
             this.FajtaBox.Name = "FajtaBox";
@@ -88,6 +89,7 @@
             this.textTejhozam.Name = "textTejhozam";
             this.textTejhozam.Size = new System.Drawing.Size(121, 20);
             this.textTejhozam.TabIndex = 5;
+            this.textTejhozam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTejhozam_KeyPress);
             // 
             // buttonOK
             // 

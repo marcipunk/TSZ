@@ -13,10 +13,14 @@ namespace TSZ
 {
     public partial class Form1 : Form
     {
+        public static string xmlpath;
+
         public Form1()
         {
             InitializeComponent();
+            tehenGridView.DataSource = TehenData.tehenTable;
         }
+
 
         private void megnyitásToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -27,13 +31,12 @@ namespace TSZ
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    TehenData tehenek = new TehenData();
+                //TehenData tehenek = new TehenData();
+                xmlpath = openFileDialog.FileName;
                     TehenData.tehenTable.ReadXml(openFileDialog.FileName);
                     //comboBox1.Enabled = true;
-                    dataGridView1.DataSource = TehenData.tehenTable;
+                    tehenGridView.DataSource = TehenData.tehenTable;
                 }
-
-
             
         }
 
@@ -44,6 +47,17 @@ namespace TSZ
         }
 
         private void openFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tehenGridView.Update();
+            tehenGridView.Refresh();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

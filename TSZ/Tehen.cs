@@ -14,6 +14,38 @@ namespace TSZ
         private int tejhozam;
         private Fajta fajta;
 
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+        }
+
+        public string Nev
+        {
+            get
+            {
+                return nev;
+            }
+        }
+
+        public int Tejhozam
+        {
+            get
+            {
+                return tejhozam;
+            }
+        }
+
+        internal Fajta Fajta
+        {
+            get
+            {
+                return fajta;
+            }
+        }
+
         public Tehen(string name, int tejhozam, Fajta fajta)
         {
             this.id = TehenData.tehenTable.Rows.Count + 1;

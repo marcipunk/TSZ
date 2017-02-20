@@ -1,4 +1,6 @@
-﻿namespace TSZ
+﻿using System.Windows.Forms;
+
+namespace TSZ
 {
     partial class Form1
     {
@@ -29,27 +31,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.tehenGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.megnyitásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ujTehen = new System.Windows.Forms.Button();
             this.tehenDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tehenGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tehenDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // tehenGridView
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.tehenDataBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 124);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(677, 315);
-            this.dataGridView1.TabIndex = 0;
+            this.tehenGridView.AllowUserToAddRows = false;
+            this.tehenGridView.AllowUserToDeleteRows = false;
+            this.tehenGridView.AllowUserToOrderColumns = true;
+            this.tehenGridView.AllowUserToResizeRows = false;
+            this.tehenGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.tehenGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tehenGridView.Location = new System.Drawing.Point(12, 124);
+            this.tehenGridView.Name = "tehenGridView";
+            this.tehenGridView.ReadOnly = true;
+            this.tehenGridView.Size = new System.Drawing.Size(677, 315);
+            this.tehenGridView.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -82,12 +89,17 @@
             // 
             // ujTehen
             // 
-            this.ujTehen.Location = new System.Drawing.Point(24, 54);
+            this.ujTehen.BackColor = System.Drawing.Color.SpringGreen;
+            this.ujTehen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ujTehen.Image = global::TSZ.Properties.Resources._01_cow_icon;
+            this.ujTehen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ujTehen.Location = new System.Drawing.Point(12, 37);
             this.ujTehen.Name = "ujTehen";
-            this.ujTehen.Size = new System.Drawing.Size(75, 23);
+            this.ujTehen.Size = new System.Drawing.Size(148, 64);
             this.ujTehen.TabIndex = 2;
             this.ujTehen.Text = "Új tehén";
-            this.ujTehen.UseVisualStyleBackColor = true;
+            this.ujTehen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ujTehen.UseVisualStyleBackColor = false;
             this.ujTehen.Click += new System.EventHandler(this.ujTehen_Click);
             // 
             // tehenDataBindingSource
@@ -100,12 +112,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 466);
             this.Controls.Add(this.ujTehen);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tehenGridView);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(717, 505);
+            this.MinimumSize = new System.Drawing.Size(717, 505);
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tehenGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tehenDataBindingSource)).EndInit();
@@ -116,13 +132,28 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tehenGridView;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private new System.Windows.Forms.ToolStripMenuItem Menu;
         private System.Windows.Forms.ToolStripMenuItem megnyitásToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.BindingSource tehenDataBindingSource;
         private System.Windows.Forms.Button ujTehen;
+
+        public DataGridView TehenGridView
+        {
+            get
+            {
+                return tehenGridView;
+            }
+
+            set
+            {
+                tehenGridView = value;
+            }
+        }
+
+
     }
 }
 
