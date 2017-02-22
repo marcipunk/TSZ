@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TSZ
 {
-    enum Fajta { Holstein_fríz, Jersey, Ayrshire, Magyartarka}
+    public enum Fajta { Holstein_fríz, Jersey, Ayrshire, Magyartarka}
 
     class Tehen
     {

@@ -23,12 +23,15 @@ namespace TSZ.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string x {
+        [global::System.Configuration.DefaultSettingValueAttribute("TSZ.xml")]
+        public string path {
             get {
-                return ((string)(this["x"]));
+                return ((string)(this["path"]));
+            }
+            set {
+                this["path"] = value;
             }
         }
     }

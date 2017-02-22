@@ -52,6 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSTehen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTehen.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +90,17 @@
     <EmbeddedResource Include="TehenDialog.resx">
       <DependentUpon>TehenDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DSTehen.xsc">
+      <DependentUpon>DSTehen.xsd</DependentUpon>
+    </None>
+    <None Include="DSTehen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTehen.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSTehen.xss">
+      <DependentUpon>DSTehen.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\TehenData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -128,7 +144,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Meat-Claever-icon.png" />
     <None Include="01-cow-icon.png" />
+    <None Include="02-cow-icon.png" />
+    <None Include="edit-icon.png" />
     <Content Include="Icojam-Animals-01-cow.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

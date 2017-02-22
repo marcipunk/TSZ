@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSTehen" targetNamespace="http://tempuri.org/DSTehen.xsd" xmlns:mstns="http://tempuri.org/DSTehen.xsd" xmlns="http://tempuri.org/DSTehen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSTehen" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSTehen" msprop:Generator_UserDSName="DSTehen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtTehen" msprop:Generator_TableClassName="dtTehenDataTable" msprop:Generator_TableVarName="tabledtTehen" msprop:Generator_TablePropName="dtTehen" msprop:Generator_RowDeletingName="dtTehenRowDeleting" msprop:Generator_RowChangingName="dtTehenRowChanging" msprop:Generator_RowEvHandlerName="dtTehenRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTehenRowDeleted" msprop:Generator_UserTableName="dtTehen" msprop:Generator_RowChangedName="dtTehenRowChanged" msprop:Generator_RowEvArgName="dtTehenRowChangeEvent" msprop:Generator_RowClassName="dtTehenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Nev" msprop:Generator_ColumnVarNameInTable="columnNev" msprop:Generator_ColumnPropNameInRow="Nev" msprop:Generator_ColumnPropNameInTable="NevColumn" msprop:Generator_UserColumnName="Nev" type="xs:string" />
+              <xs:element name="Tejhozam" msprop:Generator_ColumnVarNameInTable="columnTejhozam" msprop:Generator_ColumnPropNameInRow="Tejhozam" msprop:Generator_ColumnPropNameInTable="TejhozamColumn" msprop:Generator_UserColumnName="Tejhozam" type="xs:int" />
+              <xs:element name="Fajta" msprop:Generator_ColumnVarNameInTable="columnFajta" msprop:Generator_ColumnPropNameInRow="Fajta" msprop:Generator_ColumnPropNameInTable="FajtaColumn" msprop:Generator_UserColumnName="Fajta" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -12,10 +12,32 @@ namespace TSZ
 {
     public partial class TehenDialog : Form
     {
+        //private DSTehen.dtTehenRow temptehen;
+        public string tempnev;
+        public int temptej;
+        public string tempfajta;
+        //public DataGridViewSelectedRowCollection tempRows;
+        public int tempid;
+
         public TehenDialog()
         {
             InitializeComponent();
             FajtaBox.DataSource = Enum.GetValues(typeof(Fajta));
+
+      
+
+        }
+
+        public TehenDialog(DataGridViewRow CurrentRow)
+        {
+            InitializeComponent();
+            FajtaBox.DataSource = Enum.GetValues(typeof(Fajta));
+
+            this.tempid = Int32.Parse(CurrentRow.Cells[0].Value.ToString());
+            textNev.Text = CurrentRow.Cells[1].Value.ToString();
+            textTejhozam.Text = CurrentRow.Cells[2].Value.ToString();
+            FajtaBox.SelectedIndex = (Int32)Enum.Parse(typeof(Fajta), CurrentRow.Cells[3].Value.ToString());
+
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -24,15 +46,12 @@ namespace TSZ
 
             if (textNev.Text.Length != 0 && textTejhozam.Text.Length != 0 && (Regex.IsMatch(textTejhozam.Text, @"^[0-9]*$")))
             {
-                DataRow temprow = TehenData.tehenTable.NewRow();
-                Tehen newtehen = new Tehen(textNev.Text, Int32.Parse(textTejhozam.Text), (Fajta)FajtaBox.SelectedIndex);
-                temprow[0] = newtehen.Id;
-                temprow[1] = newtehen.Nev;
-                temprow[2] = newtehen.Tejhozam;
-                temprow[3] = newtehen.Fajta;
-                TehenData.tehenTable.Rows.Add(temprow);
                 
-                TehenData.tehenTable.WriteXml(Form1.xmlpath);
+
+                tempnev = textNev.Text;
+                temptej= Int32.Parse(textTejhozam.Text);
+                tempfajta = FajtaBox.SelectedValue.ToString();
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
